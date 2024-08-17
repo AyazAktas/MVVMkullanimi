@@ -6,7 +6,7 @@
     <data>
     <variable
         name="mainActivityNesnesi"
-        type="" />
+        type="com.example.mvvmkullanimi.MainActivity" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -58,6 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="59dp"
             android:text="Topla"
+            android:onClick="@{()-> mainActivityNesnesi.buttonToplamaTikla()}"
             app:layout_constraintEnd_toStartOf="@+id/buttonCarpma"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,6 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="59dp"
             android:text="Çarp"
+            android:onClick="@{()-> mainActivityNesnesi.buttonCarpmaTikla()}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/buttonToplama"
