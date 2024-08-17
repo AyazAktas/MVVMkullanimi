@@ -27,26 +27,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun buttonToplamaTikla(){
-        val alinanSayi1=binding.editTextSayiBir.text.toString()
-        val alinanSayi2=binding.editTextSayi2.text.toString()
-
+    fun buttonToplamaTikla(alinanSayi1:String,alinanSayi2:String){
         val sayi1=alinanSayi1.toInt()
         val sayi2=alinanSayi2.toInt()
-
-
         val toplam=sayi2+sayi1
         binding.textView.text=toplam.toString()
 
     }
-    fun buttonCarpmaTikla(){
-        val alinanSayi1=binding.editTextSayiBir.text.toString()
-        val alinanSayi2=binding.editTextSayi2.text.toString()
-
+    fun buttonCarpmaTikla(alinanSayi1:String,alinanSayi2:String){
         val sayi1=alinanSayi1.toInt()
         val sayi2=alinanSayi2.toInt()
-
-
         val carpma=sayi2*sayi1
         binding.textView.text=carpma.toString()
     }
