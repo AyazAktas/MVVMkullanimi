@@ -10,6 +10,7 @@
         <variable
             name="hesaplamaSonucu"
             type="String" />
+        <import type="android.view.View"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,6 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
             android:text="@{hesaplamaSonucu}"
+            android:visibility="@{Integer.parseInt(hesaplamaSonucu)>0?View.VISIBLE:View.INVISIBLE}"
             android:textColor="@{Integer.parseInt(hesaplamaSonucu)>10?@color/kirmizi:@color/mavi}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
