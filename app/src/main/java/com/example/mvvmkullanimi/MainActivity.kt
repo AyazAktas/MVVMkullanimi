@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
 
 
-        binding.textView.text="0"
+        binding.hesaplamaSonucu="0"
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -31,13 +31,13 @@ class MainActivity : AppCompatActivity() {
         val sayi1=alinanSayi1.toInt()
         val sayi2=alinanSayi2.toInt()
         val toplam=sayi2+sayi1
-        binding.textView.text=toplam.toString()
+        binding.hesaplamaSonucu=toplam.toString()
 
     }
     fun buttonCarpmaTikla(alinanSayi1:String,alinanSayi2:String){
         val sayi1=alinanSayi1.toInt()
         val sayi2=alinanSayi2.toInt()
         val carpma=sayi2*sayi1
-        binding.textView.text=carpma.toString()
+        binding.hesaplamaSonucu=carpma.toString()
     }
 }
