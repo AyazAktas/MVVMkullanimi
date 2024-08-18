@@ -18,24 +18,19 @@ class MainActivity : AppCompatActivity() {
         binding=DataBindingUtil.setContentView(this,R.layout.activity_main)
         binding.mainActivityNesnesi=this
         enableEdgeToEdge()
-
-
-        binding.hesaplamaSonucu=viewModel.sonuc
-
+        viewModel.sonuc.observe(this) {
+            binding.hesaplamaSonucu = it
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
     }
-
     fun buttonToplamaTikla(alinanSayi1:String,alinanSayi2:String){
         viewModel.toplamaYap(alinanSayi1,alinanSayi2)
-        binding.hesaplamaSonucu=viewModel.sonuc
-
     }
     fun buttonCarpmaTikla(alinanSayi1:String,alinanSayi2:String){
         viewModel.carpmaYap(alinanSayi1,alinanSayi2)
-        binding.hesaplamaSonucu=viewModel.sonuc
     }
 }
